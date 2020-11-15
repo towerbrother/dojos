@@ -37,26 +37,12 @@ Make a beautiful IHM to render grid of any size in one page.
 
 */
 
-const canvasWidth = 400;
-const canvasHeight = 400;
-const resolution = 40;
+const canvasWidth = 700;
+const canvasHeight = 700;
+const resolution = 5;
 const cols = canvasWidth / resolution;
 const rows = canvasHeight / resolution;
 let grid = populateGrid(makeGrid());
-let next = makeGrid();
-
-function countNeighbours(grid, x, y) {
-  let sum = 0;
-  for (let i = -1; i < 2; i++) {
-    for (let j = -1; j < 2; j++) {
-      let col = (x + i + cols) % cols;
-      let row = (y + j + rows) % rows;
-      sum += grid[col][row];
-    }
-  }
-  sum -= grid[x][y];
-  return sum;
-}
 
 function makeGrid() {
   let array = new Array(cols);
@@ -95,8 +81,21 @@ function renderGrid(grid) {
   }
 }
 
-function gameOfLife(grid) {
-  renderGrid(grid);
+function countNeighbours(grid, x, y) {
+  let sum = 0;
+  for (let i = -1; i < 2; i++) {
+    for (let j = -1; j < 2; j++) {
+      let col = (x + i + cols) % cols;
+      let row = (y + j + rows) % rows;
+      sum += grid[col][row];
+    }
+  }
+  sum -= grid[x][y];
+  return sum;
+}
+
+function nextGen(grid) {
+  let next = grid.map((arr) => [...arr]);
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let neighbours = countNeighbours(grid, i, j);
@@ -110,7 +109,13 @@ function gameOfLife(grid) {
       }
     }
   }
-  grid = next;
+  return next;
 }
 
-setInterval(gameOfLife(grid), 2000);
+function gameOfLife() {
+  grid = nextGen(grid);
+  renderGrid(grid);
+  requestAnimationFrame(gameOfLife);
+}
+
+requestAnimationFrame(gameOfLife);
