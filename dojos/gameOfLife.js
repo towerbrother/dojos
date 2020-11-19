@@ -63,19 +63,19 @@ function populateGrid(grid) {
 
 function renderGrid(grid) {
   const canvas = document.getElementById("canvas");
-  const context = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
   canvas.height = canvasHeight;
   canvas.width = canvasWidth;
-  context.fillStyle = "black";
-  context.fillRect(0, 0, canvasWidth, canvasHeight);
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let x = i * resolution;
       let y = j * resolution;
       if (grid[i][j] === 1) {
-        context.fillStyle = "yellow";
-        context.fillRect(x, y, resolution - 1, resolution - 1);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(x, y, resolution - 1, resolution - 1);
       }
     }
   }
