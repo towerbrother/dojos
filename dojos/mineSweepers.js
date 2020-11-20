@@ -126,42 +126,49 @@ function gameOver() {
   renderGrid(grid);
 }
 
+function contains(cell, x, y) {
+  return (
+    x > cell.x &&
+    x < cell.x + resolution &&
+    y > cell.y &&
+    y < cell.y + resolution
+  );
+}
+
+function reveal(cell) {
+  cell.revealed = true;
+  if (cell.neighboursCount >= 0) floodFill(cell);
+}
+
+function floodFill(cell) {
+  for (let i = -1; i < 2; i++) {
+    for (let j = -1; j < 2; j++) {
+      let col = cell.x + i;
+      let row = cell.y + j;
+      if (col > -1 && col < cols && row > -1 && row < rows) {
+        if (!grid[col][row].revealed) {
+          reveal(grid[col][row]);
+        }
+      }
+    }
+  }
+}
+
 function play(level) {
   grid = populateGrid(makeGrid(), level);
   renderGrid(grid);
   console.log(grid);
   canvas.addEventListener("mousedown", (e) => {
-    cellPressed(e.offsetX, e.offsetY);
-    renderGrid(grid);
-    gameOver();
+    for (let i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        if (contains(grid[i][j], e.offsetX, e.offsetY)) {
+          reveal(grid[i][j]);
+          if (grid[i][j].mine) gameOver();
+          renderGrid(grid);
+        }
+      }
+    }
   });
 }
-
-function cellPressed(x, y) {
-  for (let i = 0; i < cols; i++) {
-    for (let j = 0; j < rows; j++) {
-      grid[i][j].revealed =
-        x > grid[i][j].x &&
-        x < grid[i][j].x + resolution &&
-        y > grid[i][j].y &&
-        y < grid[i][j].y + resolution;
-      // if (grid[i][j].countNeighbours === 0) floodFill(grid[i][j]);
-    }
-  }
-}
-
-// function floodFill(cell) {
-//   for (let i = -1; i < 2; i++) {
-//     for (let j = -1; j < 2; j++) {
-//       let col = cell.x + i;
-//       let row = cell.y + j;
-//       if (col > -1 && col < cols && row > -1 && row < rows) {
-//         if (!grid[col][row].revealed && grid[col][row].countNeighbours === 0) {
-//           floodFill(row, col);
-//         }
-//       }
-//     }
-//   }
-// }
 
 play(easy);
