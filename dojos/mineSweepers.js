@@ -23,6 +23,14 @@ function drawMine(x, y) {
   ctx.fillText("M", x, y);
 }
 
+function drawNumber(n, x, y) {
+  ctx.font = "30px serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = "#000000";
+  ctx.fillText(n, x, y);
+}
+
 function makeGrid() {
   let array2D = new Array(cols);
   for (let i = 0; i < cols; i++) {
@@ -91,11 +99,7 @@ function renderGrid(grid) {
           ctx.fillStyle = "#cccccc";
           ctx.fillRect(x + 2, y + 2, resolution - 4, resolution - 4);
           if (grid[i][j].neighboursCount > 0) {
-            ctx.fillStyle = "#000000";
-            ctx.font = "30px serif";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.fillText(
+            drawNumber(
               grid[i][j].neighboursCount,
               x + resolution * 0.5,
               y + resolution * 0.5
@@ -105,38 +109,6 @@ function renderGrid(grid) {
       }
     }
   }
-}
-
-function cellPressed(x, y) {
-  for (let i = 0; i < cols; i++) {
-    for (let j = 0; j < rows; j++) {
-      grid[i][j].revealed =
-        x > grid[i][j].x &&
-        x < grid[i][j].x + resolution &&
-        y > grid[i][j].y &&
-        y < grid[i][j].y + resolution;
-      if (grid[i][j].countNeighbours === 0) floodFill(grid[i][j]);
-    }
-  }
-}
-
-function floodFill(cell) {
-  for (let i = -1; i < 2; i++) {
-    for (let j = -1; j < 2; j++) {
-      let col = cell.x + i;
-      let row = cell.y + j;
-      if (col > -1 && col < cols && row > -1 && row < rows) {
-        if (!grid[col][row].revealed) {
-          cellPressed(row, col);
-        }
-      }
-    }
-  }
-}
-
-function gameSetup(level) {
-  grid = populateGrid(makeGrid(), level);
-  renderGrid(grid);
 }
 
 function gameOver() {
@@ -155,7 +127,8 @@ function gameOver() {
 }
 
 function play(level) {
-  gameSetup(level);
+  grid = populateGrid(makeGrid(), level);
+  renderGrid(grid);
   console.log(grid);
   canvas.addEventListener("mousedown", (e) => {
     cellPressed(e.offsetX, e.offsetY);
@@ -163,5 +136,32 @@ function play(level) {
     gameOver();
   });
 }
+
+function cellPressed(x, y) {
+  for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
+      grid[i][j].revealed =
+        x > grid[i][j].x &&
+        x < grid[i][j].x + resolution &&
+        y > grid[i][j].y &&
+        y < grid[i][j].y + resolution;
+      // if (grid[i][j].countNeighbours === 0) floodFill(grid[i][j]);
+    }
+  }
+}
+
+// function floodFill(cell) {
+//   for (let i = -1; i < 2; i++) {
+//     for (let j = -1; j < 2; j++) {
+//       let col = cell.x + i;
+//       let row = cell.y + j;
+//       if (col > -1 && col < cols && row > -1 && row < rows) {
+//         if (!grid[col][row].revealed && grid[col][row].countNeighbours === 0) {
+//           floodFill(row, col);
+//         }
+//       }
+//     }
+//   }
+// }
 
 play(easy);
