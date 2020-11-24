@@ -1,0 +1,136 @@
+<!-- 
+Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/VPaoNP.
+-->
+
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- link to my CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Survey form</title>
+
+  </head>
+
+  <body>
+
+    <header>
+        <nav>
+            <ul class="nav">Home</ul>
+            <ul class="nav">FAQ</ul>
+            <ul class="nav">Contacts</ul>
+        </nav>
+    </header>
+      
+    <h1 id="title">Volleyball survey form</h1>
+    
+    <div>
+
+        <div id="outer-form">
+           
+            <div>
+                <p id="description">
+                The new season is starting and we are currently recruiting. We will run two trials: on the 1st September at the Lambeth sport center from 06:30pm to 08:30pm or on the 5th September at the Wandsworth sport centre from 06:30pm to 08:30pm.
+                </p>
+            </div>
+
+            <h2 id="description-2">Come and join us! We are looking forward to see you!</h2> 
+
+            <form id="survey-form" method="get">
+
+                <div id="personal-info">
+                    <div>
+                        <div class="left-tab">
+                            <label for="Name" id="name-label">* Name:</label>
+                        </div>
+                        <div class="right-tab">
+                            <input class="text" type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="left-tab">
+                            <label for="Email" id="email-label">* Email:</label>
+                        </div>
+                        <div class="right-tab">
+                            <input class="text" type="email" id="email" placeholder="Enter your Email" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="left-tab">
+                            <label for="Phone" id="number-label">* Phone number:</label>
+                        </div>
+                        <div class="right-tab">
+                            <input class="text" type="number" id="number" placeholder="Enter your phone number" min="0" max="9999999999" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="trials">
+                    <div class="left-tab">
+                        <label for="Trial-day" id="trial-day">Preferred trials day:</label>
+                    </div>
+                    <div class="right-tab">
+                        <input type="radio" id="radio" name="radio-buttons" value="1st-sept"> 1st September 06:30pm-08:30pm<br>
+                        <input type="radio" id="radio" name="radio-buttons" value="5th-sept"> 5th September 06:30pm-08:30pm
+                    </div>
+                </div>
+
+                <div id="role">
+                    <div class="left-tab">
+                        <label for="Role" id="role">Preferred role:</label>
+                    </div>
+                    <div class="right-tab">
+                        <select id="dropdown">
+                            <option value="setter">Setter</option>
+                            <option value="hitter">Hitter</option>
+                            <option value="middle">Middle</option>
+                            <option value="opposite">Opposite</option>
+                            <option value="libero">Libero</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="availability">
+                    <div class="left-tab">
+                        <label for="Availability" id="availability">Training availability:</label>
+                    </div>
+                    <div class="right-tab">
+                        <input type="checkbox" name="monday" value="Monday"> Monday<br>
+                        <input type="checkbox" name="tuesday" value="Tuesday"> Tuesday<br>
+                        <input type="checkbox" name="wednesday" value="Wednesday"> Wednesday<br>
+                        <input type="checkbox" name="thursday" value="Thursday"> Thursday<br>
+                        <input type="checkbox" name="friday" value="Friday"> Friday<br>
+                        <input type="checkbox" name="saturday" value="Saturday" checked> Saturday (game-day)
+                    </div>
+                </div>
+
+                <div id="extra">
+                    <div class="left-tab">
+                        <label for="extra" id="extra-label">Additional requirements:</label>
+                    </div>
+                    <div class="right-tab">
+                        <textarea>Any question?</textarea>
+                    </div>
+                </div>
+
+                <div id="submit-div"> 
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+        
+  </body>
+    
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+</html>

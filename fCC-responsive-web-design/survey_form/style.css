@@ -1,0 +1,113 @@
+body {
+    display: block;
+    background-color: azure;
+    margin: 50px 100px;
+    font-family: 'Courier New', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+div {
+    display: block;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav {
+    transition: 0.3s font-size linear, 0.3s color linear;
+}
+
+.nav:hover {
+    color: red;
+    font-size: 30px;
+    transition: 0.3s font-size linear, 0.3s color linear;
+}
+
+h1 {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s font-size linear;
+    transition: 0.3s color linear;
+}
+
+h1:hover{
+    font-size: 40px;
+    color: red;
+    transition: 0.3s font-size linear, 0.3s color linear;
+}
+
+p {
+    display: block;
+    margin: 15px 20%;
+    text-align: justify;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+form {
+    background-color: #efeff5;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 900px;
+    padding: 15px 5px;
+}
+
+.left-tab {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.right-tab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 280px;
+}
+
+.text {
+    width: 280px;
+    vertical-align: top;
+    text-align: start;
+}
+
+#questions {
+    height: 100px;
+}
+
+#submit {
+    text-align: center;
+}
+
+button {
+    background-color: azure;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+    

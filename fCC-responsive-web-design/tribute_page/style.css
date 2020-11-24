@@ -1,0 +1,61 @@
+body {
+    background-color: #e0e0eb;
+    margin: 5% 10%;
+    border: solid;
+}
+
+main {
+    display: block;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 2;
+    text-align: center;
+    margin: 5% 10%;
+}
+
+h1 {
+    display: block;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+h2 {
+    display: block;
+    font-size: 1em;
+}
+
+h3 {
+    display: block;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+h4 {
+    display: block;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+ul {
+    display: block;
+    text-align: justify;
+    margin: 3% 10%;
+}
+
+figcaption {
+    display: block;
+    margin: 20px auto
+}
+
+blockquote {
+    display: block;
+    margin: 3% 10%;
+    text-align: left;
+    font-style: italic;
+}
+
+img {
+    display: block;
+    max-width:75%;
+    height: auto;
+    margin: 3% auto;
+}

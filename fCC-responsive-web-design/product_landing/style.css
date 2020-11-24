@@ -1,0 +1,236 @@
+/*------------------------------------------------------*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    margin: auto;
+}
+
+/*------------------------------------------------------*/
+
+#header {
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    padding: 0px 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    width: 40vw;
+}
+
+#header-img {
+    width: auto;
+    height: 120px;
+}
+
+#nav-bar {
+    width: 60vw;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: black;
+}
+
+@media (max-width: 50%) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/*------------------------------------------------------*/
+
+#subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: coral;
+    
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#subscribe h2 {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+#subscribe input[type="email"] {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+}
+
+#subscribe input[type="submit"] {
+    padding: 5px;
+    margin: 15px;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+/*------------------------------------------------------*/
+
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 50px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    width: 800px;
+}
+
+.fas::before {
+    display: flex;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-size: 5em;
+    margin: 30px;
+    color: coral;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-coffee::before {
+    font-weight: 900; 
+    content: "\f0f4"; 
+  }
+
+.fa-truck::before {
+    font-weight: 900; 
+    content: "\f0d1";
+  }
+
+.fa-fa-thumbs-up::before {
+    font-weight: 900; 
+    content: "\f164";
+  }
+
+/*------------------------------------------------------*/
+
+#how-it-works {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/*------------------------------------------------------*/
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+}
+
+img {
+    width: auto;
+    height: 100px;
+    margin: 15px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 30px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.product-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: coral;
+    border-bottom: solid;
+    border-color: black;
+    border-width: thin;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px;
+}
+
+button {
+    padding: 5px;
+    margin: 15px;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+/*------------------------------------------------------*/
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px;
+}
+
+#footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-elements {
+    color: black;
+}
+
+
+
+
+
+
