@@ -88,6 +88,41 @@ namespace Potter
     class Program
     {
 
+        static double CalculatePrice(Books books, Discount discounts, int[,] matrix, int rows, int columns)
+        {
+            var price = 0.00;
+
+            for (int j = 0; j < columns; j++)
+            {
+                var columnSum = 0;
+                for (int i = 0; i < rows; i++)
+                {
+                    columnSum += matrix[i, j];
+                }
+
+                switch (columnSum)
+                {
+                    case 2:
+                        price += (books.Set[1].Price * 2 * (1 - discounts.Discount2));
+                        break;
+                    case 3:
+                        price += (books.Set[2].Price * 3 * (1 - discounts.Discount3));
+                        break;
+                    case 4:
+                        price += (books.Set[3].Price * 4 * (1 - discounts.Discount4));
+                        break;
+                    case 5:
+                        price += (books.Set[4].Price * 5 * (1 - discounts.Discount5));
+                        break;
+                    default:
+                        price += (books.Set[0].Price * 1 * (1 - discounts.Discount1));
+                        break;
+                }
+            }
+
+            return price;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Start");
@@ -151,36 +186,45 @@ namespace Potter
                 // more than one column means different possible matrixes
                 else
                 {
-                    // populate the array with 1s and/or 0s.
-                    var matrix = new int[books.Set.Count, max];
-                    for (int i = 0; i < books.Set.Count; i++)
+                    var rows = books.Set.Count;
+                    var columns = max;
+                    var matrix = new int[rows, columns];
+
+                    // first - populate only with those values that are max
+                    for (int i = 0; i < rows; i++)
                     {
-                        // books.Set[i].Copies == max --> put 1 everywhere
+                        // books.Set[i].Copies == max --> put 1 everywhere - put 0 everywhere else
                         if (books.Set[i].Copies == max)
                         {
-                            for (int j = 0; j < max; j++)
+                            for (int j = 0; j < columns; j++)
                             {
                                 matrix[i, j] = 1;
                             }
                         }
-                        else
+                    }
+                    // second - calculate starting price (not dynamic part of the price)
+                    var staticPrice = CalculatePrice(books, discounts, matrix, rows, columns);
+                    var dynamicPrice = staticPrice;
+                    
+                    // third - build up dynamic price --> keep MIN price
+                    for (int i = 0; i < rows; i++)
+                    {
+                        var numCopies = books.Set[i].Copies;
+                        if (numCopies != max)
                         {
-                            // books.Set[i].Copies < max --> check price dinamically --> keep MIN price
-                            var numCopies = books.Set[i].Copies;
-                            for (int j = 0; j < max; j++)
+                            // only the last book to place needs checking
+                            while (numCopies > 1)
                             {
-                                if (numCopies > 0)
+                                for (int j = 0; j < columns; j++)
                                 {
                                     matrix[i, j] = 1;
-                                    numCopies--;
                                 }
-                                else
-                                {
-                                    matrix[i, j] = 0;
-                                }
+                            numCopies--;
                             }
+                            dynamicPrice = CalculatePrice(books, discounts, matrix, rows, columns);
+                            // ...
                         }
-                    }
+                    }          
                 }
                 Console.WriteLine("Total price: {0} Euros", price);
                 Console.WriteLine("End");
