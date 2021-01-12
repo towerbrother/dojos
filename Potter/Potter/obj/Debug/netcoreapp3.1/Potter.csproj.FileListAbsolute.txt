@@ -1,0 +1,13 @@
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\bin\Debug\netcoreapp3.1\Potter.exe
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\bin\Debug\netcoreapp3.1\Potter.deps.json
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\bin\Debug\netcoreapp3.1\Potter.runtimeconfig.json
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\bin\Debug\netcoreapp3.1\Potter.runtimeconfig.dev.json
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\bin\Debug\netcoreapp3.1\Potter.dll
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\bin\Debug\netcoreapp3.1\Potter.pdb
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.csprojAssemblyReference.cache
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.AssemblyInfoInputs.cache
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.AssemblyInfo.cs
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.csproj.CoreCompileInputs.cache
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.dll
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.pdb
+C:\Users\TowerG\Desktop\code\code-with-mosh\c-sharp\dojos\Potter\Potter\obj\Debug\netcoreapp3.1\Potter.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\bin\Debug\netcoreapp3.1\RomanNumerals.exe
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\bin\Debug\netcoreapp3.1\RomanNumerals.deps.json
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\bin\Debug\netcoreapp3.1\RomanNumerals.runtimeconfig.json
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\bin\Debug\netcoreapp3.1\RomanNumerals.runtimeconfig.dev.json
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\bin\Debug\netcoreapp3.1\RomanNumerals.dll
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\bin\Debug\netcoreapp3.1\RomanNumerals.pdb
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.csprojAssemblyReference.cache
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.AssemblyInfoInputs.cache
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.AssemblyInfo.cs
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.csproj.CoreCompileInputs.cache
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.dll
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.pdb
+C:\Users\GTO\Documents\Giorgio\RomanNumerals\obj\Debug\netcoreapp3.1\RomanNumerals.genruntimeconfig.cache
