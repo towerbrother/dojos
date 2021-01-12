@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TowerG\\Desktop\\code\\code-with-mosh\\c-sharp\\dojos\\Potter\\Potter\\Potter.csproj": {}
+    "C:\\Users\\GTO\\Documents\\giorgio\\code\\dojos\\Potter\\Potter\\Potter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TowerG\\Desktop\\code\\code-with-mosh\\c-sharp\\dojos\\Potter\\Potter\\Potter.csproj": {
+    "C:\\Users\\GTO\\Documents\\giorgio\\code\\dojos\\Potter\\Potter\\Potter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TowerG\\Desktop\\code\\code-with-mosh\\c-sharp\\dojos\\Potter\\Potter\\Potter.csproj",
+        "projectUniqueName": "C:\\Users\\GTO\\Documents\\giorgio\\code\\dojos\\Potter\\Potter\\Potter.csproj",
         "projectName": "Potter",
-        "projectPath": "C:\\Users\\TowerG\\Desktop\\code\\code-with-mosh\\c-sharp\\dojos\\Potter\\Potter\\Potter.csproj",
-        "packagesPath": "C:\\Users\\TowerG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TowerG\\Desktop\\code\\code-with-mosh\\c-sharp\\dojos\\Potter\\Potter\\obj\\",
+        "projectPath": "C:\\Users\\GTO\\Documents\\giorgio\\code\\dojos\\Potter\\Potter\\Potter.csproj",
+        "packagesPath": "C:\\Users\\GTO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\GTO\\Documents\\giorgio\\code\\dojos\\Potter\\Potter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\TowerG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GTO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/stellenanzeigen/_packaging/nuget_feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
