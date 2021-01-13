@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 document.addEventListener("keydown", keyPush);
-setInterval(game, 1000 / 15);
+setInterval(game, 1000 / 20);
 
 canvas.height = 400;
 canvas.width = 400;
