@@ -47,13 +47,13 @@ namespace Potter
         public double Discount4 { get; }
         public double Discount5 { get; }
 
-        public Discount()
+        public Discount(double discount1, double discount2, double discount3, double discount4, double discount5)
         {
-            Discount1 = 0.00;
-            Discount2 = 0.05;
-            Discount3 = 0.10;
-            Discount4 = 0.20;
-            Discount5 = 0.25;
+            Discount1 = discount1;
+            Discount2 = discount2;
+            Discount3 = discount3;
+            Discount4 = discount4;
+            Discount5 = discount5;
         }
     }
 
@@ -157,27 +157,24 @@ namespace Potter
         {
             Console.WriteLine("Start");
 
-            var r = new Random();
-            var copies = new int[5] { r.Next(6), r.Next(6), r.Next(6), r.Next(6), r.Next(6) };
-            //var copies = new int[5];
-            // user to input
-            //for(int i = 1; i <= 5; i++)
-            //{
-            //    Console.WriteLine("Enter number of copies for book #{0}:", i);
-            //    var s = Console.ReadLine();
-            //    copies[i - 1] = int.Parse(s);
-            //}
+            // user input
+            var copies = new int[5];
+            for(int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Enter number of copies for book #{0}:", i);
+                var s = Console.ReadLine();
+                copies[i - 1] = int.Parse(s);
+            }
 
+            // initialisation
+            double price;
             var book1 = new Book { Number = 1, Price = 8, Copies = copies[0] };
             var book2 = new Book { Number = 2, Price = 8, Copies = copies[1] };
             var book3 = new Book { Number = 3, Price = 8, Copies = copies[2] };
             var book4 = new Book { Number = 4, Price = 8, Copies = copies[3] };
             var book5 = new Book { Number = 5, Price = 8, Copies = copies[4] };
-
-            // initialise
-            double price;
             var books = new Books(book1, book2, book3, book4, book5);
-            var discounts = new Discount();
+            var discounts = new Discount(0.00, 0.05, 0.10, 0.20, 0.25);
             var totalCopies = books.TotalCopies();
             var max = books.Max();
 
